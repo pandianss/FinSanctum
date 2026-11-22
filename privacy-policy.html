@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinSanctum — Privacy Policy, Terms &amp; Account Deletion</title>
+  <style>
+    :root {
+      --bg: #F8F6F1;
+      --surface: #FFFFFF;
+      --ink: #14213D;
+      --muted: #4A5568;
+      --accent: #1E3A5F;
+      --gold: #9A7432;
+      --border: #E5E0D5;
+      --danger: #9B2C2C;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    header {
+      background: var(--ink);
+      color: #F8F6F1;
+      padding: 40px 20px 32px;
+      border-bottom: 3px solid var(--gold);
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #E2C78D;
+      font-weight: 600;
+    }
+    h1 {
+      margin: 8px 0 8px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .subtitle {
+      margin: 0;
+      color: #D7DFEA;
+      font-size: 15px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    nav a {
+      color: #F8F6F1;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+    }
+    nav a:hover { background: rgba(255, 255, 255, 0.12); }
+    main {
+      padding: 32px 0 60px;
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 26px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 16px;
+      margin: 18px 0 6px;
+      color: var(--ink);
+    }
+    p, li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    li { margin-bottom: 6px; }
+    .callout {
+      background: #F4EFE4;
+      border-left: 4px solid var(--gold);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .danger-box {
+      background: #FDF2F2;
+      border: 1px solid #F5C6CB;
+      border-left: 4px solid var(--danger);
+      padding: 16px 18px;
+      border-radius: 10px;
+      margin: 14px 0;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 16px 20px 40px;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="eyebrow">FinSanctum · Android Application (com.aistudio.finsanctum.krmvxq)</div>
+      <h1>Privacy Policy, Terms &amp; Account Deletion</h1>
+      <p class="subtitle">Effective November 2026 · Version 1.0 · Independent JAIIB &amp; CAIIB Exam Study Companion</p>
+      <nav>
+        <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#account-deletion">Account &amp; Data Deletion</a>
+        <a href="#ai-disclaimer">AI Disclaimer</a>
+        <a href="#terms-billing">Terms &amp; Billing</a>
+        <a href="#syllabus-scope">Content Scope</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="privacy-policy">
+      <h2>1. Privacy Policy</h2>
+      <p>
+        FinSanctum is designed as a calm, local-first banking exam study companion for Indian banking professionals
+        preparing for IIBF JAIIB and CAIIB examinations. We do not display advertisements, we do not integrate
+        third-party ad tracking SDKs, and we never sell personal information.
+      </p>
+
+      <h3>A. Local On-Device Storage (Default Offline Mode)</h3>
+      <ul>
+        <li>
+          FinSanctum works offline without requiring an account. Bookmarked formulas, saved/completed lessons,
+          solved MCQ history, Habit Ring goals, 30-day study history, Daily Study Streak, custom exam dates, and
+          Paper/Midnight theme preferences are stored locally on your device using Android Room SQLite and Jetpack DataStore.
+        </li>
+      </ul>
+
+      <h3>B. Optional Google Sign-In &amp; Cloud Backup (Firebase Auth &amp; Cloud Firestore)</h3>
+      <ul>
+        <li>
+          If you choose to enable cross-device sync via <strong>Sign in with Google</strong> (using Jetpack Credential
+          Manager and Firebase Authentication), FinSanctum stores your Firebase UID, optional Google display name,
+          optional Google email address, and your study progress metadata inside a private per-user Cloud Firestore document.
+        </li>
+        <li>
+          Strict server-side Firestore security rules restrict read, write, and delete access exclusively to your authenticated UID.
+          No other user can read, list, or modify your cloud backup.
+        </li>
+        <li>
+          All cloud data is encrypted in transit via HTTPS/TLS and at rest on Google Cloud infrastructure.
+        </li>
+      </ul>
+
+      <h3>C. Cloud AI Features (Firebase AI Logic &amp; App Check)</h3>
+      <ul>
+        <li>
+          When you invoke the <strong>AI Concept Tutor</strong>, generate a fresh <strong>Formula Vault Numerical Case Study</strong>,
+          or play a chapter in <strong>Studio AI Voice</strong> mode, only the relevant study question or chapter text is transmitted
+          over HTTPS to Google Firebase AI Logic (Gemini models) to generate the response or audio narration.
+        </li>
+        <li>
+          Do not enter confidential bank customer data, account numbers, PAN, Aadhaar, or proprietary internal bank records
+          into the AI Concept Tutor.
+        </li>
+        <li>
+          Device integrity attestation is handled via Firebase App Check (reCAPTCHA Enterprise in release builds) solely for
+          abuse and fraud prevention.
+        </li>
+      </ul>
+
+      <h3>D. Google Play Billing</h3>
+      <ul>
+        <li>
+          One-time Exam Passes are processed exclusively by Google Play Billing. FinSanctum never receives or stores your
+          UPI PIN, bank account details, or payment card numbers. Purchase entitlement metadata is queried from Google Play
+          solely to unlock or restore active passes.
+        </li>
+      </ul>
+
+      <h3>E. Children's Privacy</h3>
+      <p>
+        FinSanctum is intended for adult banking professionals (ages 18+) preparing for professional certification exams
+        and is not directed to children under 13.
+      </p>
+    </section>
+
+    <section id="account-deletion">
+      <h2>2. Account &amp; Data Deletion</h2>
+      <div class="danger-box">
+        <strong>Instant Self-Service Deletion Inside FinSanctum (Recommended):</strong>
+        <ol>
+          <li>Open the <strong>FinSanctum</strong> app on your Android device.</li>
+          <li>Tap the <strong>Account</strong> icon in the top bar (or open <strong>Account &amp; Cloud Backup → Manage</strong> on the Today tab).</li>
+          <li>Tap <strong>Delete Cloud Backup &amp; Account</strong> and confirm.</li>
+          <li>Optionally check <em>"Also erase local study progress stored on this device"</em> to wipe local DataStore records simultaneously.</li>
+        </ol>
+      </div>
+      <h3>What Is Deleted Immediately</h3>
+      <ul>
+        <li><strong>Firestore Cloud Backup:</strong> Your private <code>/users/{uid}</code> document containing your display name, email, bookmarks, completed lessons, MCQ progress, streaks, and exam date settings is permanently deleted.</li>
+        <li><strong>Firebase Authentication Record:</strong> Your Google sign-in account link in FinSanctum is permanently deleted.</li>
+        <li><strong>Local Data (Optional or Offline Users):</strong> Both signed-in and offline users can tap <strong>Reset Local Study Progress</strong> inside Account &amp; Backup or clear app storage via <em>Android Settings → Apps → FinSanctum → Clear Storage</em>.</li>
+        <li><strong>Retention Note:</strong> Google Play order receipts remain governed by your Google Play account history (FinSanctum does not store payment credentials).</li>
+      </ul>
+      <h3>Email Deletion Request (If You Uninstalled the App)</h3>
+      <p>
+        If you have already uninstalled FinSanctum and would like us to verify or purge any remaining cloud backup tied to your
+        Google email address, email <a href="mailto:sspandian.here@gmail.com">sspandian.here@gmail.com</a> from that email address
+        with the subject <strong>"FinSanctum Account Deletion Request"</strong>. Requests are processed within 7 days.
+      </p>
+    </section>
+
+    <section id="ai-disclaimer">
+      <h2>3. Generative AI Disclaimer</h2>
+      <div class="callout">
+        <strong>Verify High-Stakes Regulatory Figures:</strong> AI Concept Tutor answers and AI Numerical Case-Study drills
+        are generated dynamically by Google Gemini models and may occasionally contain arithmetic rounding slips or outdated
+        circular references. Always cross-check RBI CRAR floors, LCR/NSFR run-off weights, IRAC NPA slabs, and statutory clauses
+        against official IIBF textbooks and current RBI Master Directions.
+      </div>
+      <p>
+        FinSanctum is strictly an educational study companion and does not provide binding banking compliance advice,
+        credit underwriting advice, financial advice, or legal counsel.
+      </p>
+    </section>
+
+    <section id="terms-billing">
+      <h2>4. Terms of Use &amp; One-Time Pass Billing</h2>
+      <ul>
+        <li><strong>Independent App (No Affiliation):</strong> FinSanctum is NOT affiliated with, endorsed by, or officially connected to the Indian Institute of Banking &amp; Finance (IIBF), the Reserve Bank of India (RBI), or any bank.</li>
+        <li><strong>Mandatory Papers Paid · Electives as Complimentary Bonus:</strong> FinSanctum paid passes are priced strictly for the mandatory papers and expanded daily AI credits. CAIIB elective study packs (Central Banking today, plus any future elective packs) are provided as a complimentary bonus at no extra charge.</li>
+        <li><strong>Non-Renewing One-Time Passes:</strong> Single-Paper Rescue (3 Months), Single Exam-Cycle Pass (6 Months), and All-Access Annual Pass (12 Months) are one-time Google Play in-app purchases. They never auto-renew.</li>
+        <li><strong>Daily AI Fair-Use Limits:</strong> Free Core includes 5 shared AI credits/day; Rescue Pack includes 25/day; Exam-Cycle &amp; Annual Passes include 50/day across AI Tutor and Formula Vault Numerical Drills.</li>
+        <li><strong>Refunds &amp; Restoration:</strong> Purchases can be restored via <em>Restore Purchases</em> on the same Google Play account. Refunds follow Google Play's standard refund policy.</li>
+      </ul>
+    </section>
+
+    <section id="syllabus-scope">
+      <h2>5. Current Syllabus Coverage &amp; Roadmap</h2>
+      <ul>
+        <li><strong>Available Offline Today:</strong> Full offline study packs (structured lessons, financial tables, formulas, and practice MCQs) for all 4 mandatory CAIIB papers — <strong>ABM, BFM, ABFM, and BRBL</strong> — plus <strong>Central Banking (CB)</strong> included as a complimentary bonus elective, along with Formula Vault, Commute Audio, Habit Rings, Daily Streak, Exam Countdown, and live AI Concept Tutor.</li>
+        <li><strong>Upcoming Updates:</strong> Dedicated offline packs for mandatory <strong>JAIIB</strong> papers (IE&amp;IFS, PPB, AFM, RBWM) and additional complimentary bonus <strong>CAIIB Electives</strong> (HRM, IT &amp; Digital Banking, Risk Management, Rural Banking). Exam sitting dates for all papers are already supported in the Exam Countdown, and the AI Concept Tutor supports questions across all JAIIB and CAIIB subjects today.</li>
+      </ul>
+      <h3>Contact</h3>
+      <p>Questions or privacy requests: <a href="mailto:sspandian.here@gmail.com">sspandian.here@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 FinSanctum · Independent Banking Exam Study Companion
+  </footer>
+</body>
+</html>
